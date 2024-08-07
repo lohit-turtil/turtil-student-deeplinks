@@ -1,0 +1,11 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.turtil.student",
+      "sha256_cert_fingerprints":
+        ["03:66:B3:BC:09:2F:82:84:94:1D:B3:F9:2B:5C:F8:2C:16:DB:92:72:F1:F8:0E:A3:8E:90:6D:DF:6A:78:1F:6F"]
+    }
+  }
+]

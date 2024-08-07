@@ -1,0 +1,10 @@
+# dependencies
+package-lock.json
+node_modules/
+jest/coverage/
+.next
+
+# Expo
+.expo/
+dist/
+web-build/
