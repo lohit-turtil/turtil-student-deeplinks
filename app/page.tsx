@@ -1,19 +1,11 @@
-"use client";
+import Footer from "@/components/footer";
+import LandingPage from "@/components/home";
 
-export default function Home() {
+export default function page() {
   return (
-    <main>
-      <div
-        className="h-screen w-screen"
-        style={{
-          textAlign: "center",
-          marginTop: "100px",
-          fontSize: "30px",
-          fontWeight: 700,
-        }}
-      >
-        Turtil Student
-      </div>
-    </main>
+    <>
+      <LandingPage />
+      <Footer />
+    </>
   );
 }
