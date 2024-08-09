@@ -12,7 +12,7 @@ const privacyPolicy = [
     id: 1,
     title: "Introduction",
     content:
-      "Turtle Student is a community app for college students in India, operated by Teachbricks Private Limited ('we', 'us', 'our'), a company registered in India. This privacy policy explains how we collect, use, and protect your personal information in compliance with applicable data protection laws.",
+      "Turtil Student is a community app for college students in India, operated by Teachbricks Private Limited ('we', 'us', 'our'), a company registered in India. This privacy policy explains how we collect, use, and protect your personal information in compliance with applicable data protection laws.",
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const privacyPolicy = [
     id: 6,
     title: "User Rights",
     content:
-      "You have the right to:\n- Access your personal data\n- Correct inaccuracies in your data\n- Delete your data\n- Object to processing of your data\n- Data portability\n- Withdraw consent (where processing is based on consent)\nTo exercise these rights, please contact us at support@turtlestudent.com.",
+      "You have the right to:\n- Access your personal data\n- Correct inaccuracies in your data\n- Delete your data\n- Object to processing of your data\n- Data portability\n- Withdraw consent (where processing is based on consent)\nTo exercise these rights, please contact us at support@turtilstudent.com.",
   },
   {
     id: 7,
@@ -84,21 +84,27 @@ const privacyPolicy = [
     id: 13,
     title: "Contact Us",
     content:
-      "If you have any questions about this Privacy Policy, please contact us at:\nTeachbricks Private Limited\n4-2-564 RADHA KRISHNA NAGAR ROTARY NAGAR\nKHAMMAM, Telangana 507002\nIndia\nPhone: +91-99XXXXX089\nEmail: support@turtlestudent.com\nData Protection Officer: privacy@turtlestudent.com",
+      "If you have any questions about this Privacy Policy, please contact us at:\nTeachbricks Private Limited\n4-2-564 RADHA KRISHNA NAGAR ROTARY NAGAR\nKHAMMAM, Telangana 507002\nIndia\nPhone: +91-9908121089\nEmail: support@turtilstudent.com\nData Protection Officer: privacy@turtilstudent.com",
   },
 ];
 
 const PrivacyPolicy = () => {
+  const allItemValues = privacyPolicy.map((item) => `item-${item.id}`);
+
   return (
     <div className="p-8">
       <Card className="w-full max-w-3xl mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">
-            Privacy Policy for Turtle Student
+            Privacy Policy for Turtil Student
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion
+            type="multiple"
+            defaultValue={allItemValues}
+            className="w-full"
+          >
             {privacyPolicy.map((term) => (
               <AccordionItem key={term.id} value={`item-${term.id}`}>
                 <AccordionTrigger>{`${term.id}. ${term.title}`}</AccordionTrigger>

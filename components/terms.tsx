@@ -12,25 +12,25 @@ const termsAndConditions = [
     id: 1,
     title: "Acceptance of Terms",
     content:
-      "By using Turtle Student, you agree to these Terms and Conditions. Turtle Student is operated by Teachbricks Private Limited ('we', 'us', 'our'), a company registered in India.",
+      "By using Turtil Student, you agree to these Terms and Conditions. Turtil Student is operated by Teachbricks Private Limited ('we', 'us', 'our'), a company registered in India.",
   },
   {
     id: 2,
     title: "Company Information",
     content:
-      "Teachbricks Private Limited\nRegistered Address: 4-2-564 RADHA KRISHNA NAGAR ROTARY NAGAR, KHAMMAM, Telangana 507002, India\nPhone: +91-99XXXXX089",
+      "Teachbricks Private Limited\nRegistered Address: 4-2-564 RADHA KRISHNA NAGAR ROTARY NAGAR, KHAMMAM, Telangana 507002, India\nPhone: +91-9908121089",
   },
   {
     id: 3,
     title: "Licensing and Services",
     content:
-      "All services provided through the Turtle Student app are owned and licensed by Teachbricks Private Limited. We comply with all applicable laws and regulations in India.",
+      "All services provided through the Turtil Student app are owned and licensed by Teachbricks Private Limited. We comply with all applicable laws and regulations in India.",
   },
   {
     id: 4,
     title: "Eligibility",
     content:
-      "You must be a college student in India and at least 18 years old to use Turtle Student. We reserve the right to verify your student status and age.",
+      "You must be a college student in India and at least 18 years old to use Turtil Student. We reserve the right to verify your student status and age.",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const termsAndConditions = [
     id: 6,
     title: "User Content",
     content:
-      "• You retain ownership of your content, but grant Turtle Student a non-exclusive, worldwide, royalty-free license to use, display, and distribute it within the app\n• You are responsible for your content and must not post illegal, offensive, or harmful material\n• We reserve the right to remove any content that violates our policies",
+      "• You retain ownership of your content, but grant Turtil Student a non-exclusive, worldwide, royalty-free license to use, display, and distribute it within the app\n• You are responsible for your content and must not post illegal, offensive, or harmful material\n• We reserve the right to remove any content that violates our policies",
   },
   {
     id: 7,
@@ -66,13 +66,13 @@ const termsAndConditions = [
     id: 10,
     title: "Intellectual Property",
     content:
-      "Turtle Student and its original content are protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used without our prior written permission.",
+      "Turtil Student and its original content are protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used without our prior written permission.",
   },
   {
     id: 11,
     title: "Limitation of Liability",
     content:
-      "Turtle Student is not responsible for the actions, content, information, or data of third parties. You use the app at your own risk. To the fullest extent permitted by law, we disclaim all warranties, express or implied.",
+      "Turtil Student is not responsible for the actions, content, information, or data of third parties. You use the app at your own risk. To the fullest extent permitted by law, we disclaim all warranties, express or implied.",
   },
   {
     id: 12,
@@ -108,21 +108,27 @@ const termsAndConditions = [
     id: 17,
     title: "Contact Information",
     content:
-      "For any questions regarding these Terms, please contact us at:\nTeachbricks Private Limited\n4-2-564 RADHA KRISHNA NAGAR ROTARY NAGAR\nKHAMMAM, Telangana 507002\nIndia\nPhone: +91-99XXXXX089\nEmail: support@turtlestudent.co",
+      "For any questions regarding these Terms, please contact us at:\nTeachbricks Private Limited\n4-2-564 RADHA KRISHNA NAGAR ROTARY NAGAR\nKHAMMAM, Telangana 507002\nIndia\nPhone: +91-9908121089\nEmail: support@turtilstudent.co",
   },
 ];
 
 const TermsAndConditions = () => {
+  const allItemValues = termsAndConditions.map((item) => `item-${item.id}`);
+
   return (
     <div className="p-8">
       <Card className="w-full max-w-3xl mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">
-            Terms and Conditions for Turtle Student
+            Privacy Policy for Turtil Student
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion
+            type="multiple"
+            defaultValue={allItemValues}
+            className="w-full"
+          >
             {termsAndConditions.map((term) => (
               <AccordionItem key={term.id} value={`item-${term.id}`}>
                 <AccordionTrigger>{`${term.id}. ${term.title}`}</AccordionTrigger>
